@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Viz</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+
+    <section class="parallax-container">
+        <h1>TUS Code4fun</h1>
+        <div>
+            <button class="w3-green w3-button w3-xlarge" id="getStarted">Get Started</button>
+        </div>
+    </section>
+
+    <section class="buffer"></section>
+
+    <section id="content">
+        <div class="w3-center">
+            <h2>Data Visualisation Workshop</h2>
+            <!-- Charts -->
+            <div class="w3-card-4 w3-margin w3-white">
+                <div class="w3-row-padding">
+                    <div class="w3-quarter w3-left-align">
+                        <div class="w3-padding">
+                            <label>Title</label>
+                            <input class="w3-input w3-border" type="text" placeholder="title" id="line_title">
+                        </div>
+                        <div class="w3-row-padding">
+                            <div class="w3-half">
+                                <label>X-axis Name</label>
+                                <input class="w3-input w3-border" type="text" placeholder="x-axis name" id="line_x">
+                            </div>
+                            <div class="w3-half">
+                                <label>Y-axis Name</label>
+                                <input class="w3-input w3-border" type="text" placeholder="y-axis name" id="line_y">
+                            </div>
+                        </div>
+                        <div class="w3-padding w3-margin-bottom">
+                            <label class="w3-text" for="">Chart type: </label>
+                            <input class="w3-radio" type="radio" name="type" value="line" checked>
+                            <label>Line </label>
+
+                            <input class="w3-radio" type="radio" name="type" value="bar">
+                            <label>Bar</label>
+
+                        </div>
+                        <div class="w3-padding">
+                            <input type="file" id="fileInput" accept=".csv" text="file">
+                        </div>
+                        <div class="w3-bar w3-padding w3-margin-bottom">
+                            <button class="w3-button w3-green" id="line_update" disabled>Update</button>
+                            <button class="w3-button w3-black" id="line_download" disabled>Print</button>
+                        </div>
+
+
+
+                    </div>
+                    <div id="chart1" class="w3-threequarter"></div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="buffer"></section>
+
+    <!-- scripts -->
+    <script src="scripts/parallax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
