@@ -1,0 +1,66 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+
+:root {
+  --color: rgb(63 63 63);
+}
+
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+}
+
+.parallax-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /*  this is where the magic happens:  */
+  background-attachment: fixed;
+
+  background-image: url(images/dataAnalysis.avif);
+  background-position: center;
+  background-size: cover;
+  color: var(--color);
+  row-gap: 4rem;
+
+  text-align: center;
+}
+
+.buffer {
+  width: 100%;
+  min-height: 20vh;
+  background-color: var(--color);
+}
+
+/* .parallax-container button{
+    box-shadow: 3px 3px #cccccc;
+} */
+
+h1 {
+  font-size: 5rem;
+  text-shadow:  1px 1px #191919 , -1px -1px #444;
+  font-weight: 700;
+}
+
+
+input[type="file"]::file-selector-button {
+  border: none;
+  color: white;
+  padding: 0.5em 0.6em;
+  background-color: #2196f3;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #ccc;
+}
+
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax-container {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
